@@ -1,0 +1,26 @@
+package coachmax.btec.ac.th.showbtec;
+
+import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+
+import coachmax.btec.ac.th.showbtec.fragment.MainFragment;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        // Add Fragment
+        if (savedInstanceState == null) {
+            getSupportFragmentManager().beginTransaction()
+                    .add(R.id.contentMainFragment, new MainFragment())
+                    .commit();
+
+        }
+
+
+
+    } // Main Method
+} // Main class
